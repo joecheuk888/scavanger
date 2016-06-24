@@ -220,7 +220,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
+<<<<<<< HEAD
     <Compile Include="Impl\DroidAuthenticator.cs" />
+=======
+    <Compile Include="DroidAuthenticator.cs" />
+>>>>>>> 3476c60... Login view shows
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

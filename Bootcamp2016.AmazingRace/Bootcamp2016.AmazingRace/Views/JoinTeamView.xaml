@@ -3,4 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Bootcamp2016.AmazingRace.Views.JoinTeamView">
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand" Padding="5,20,5,0" >
+      <Entry 
+        x:Name="TeamCodeEntry"
+        Placeholder="Enter Team Code"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand"
+        Clicked="OnButtonClicked"/>
+      <Button
+            Text="Join"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClicked"/>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

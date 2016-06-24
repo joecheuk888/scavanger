@@ -36,8 +36,12 @@ namespace Bootcamp2016.AmazingRace
                 .PerRequest<CluesViewModel>()
                 .PerRequest<DetailViewModel>()
                 .PerRequest<MapViewModel>()
+<<<<<<< HEAD
                 .PerRequest<TeamViewModel>()
 >>>>>>> 95551d7... j3
+=======
+                .PerRequest<LoginViewModel>()
+>>>>>>> 3476c60... Login view shows
                 ;
 
             container.Singleton<ISettingsService, SettingsService>();

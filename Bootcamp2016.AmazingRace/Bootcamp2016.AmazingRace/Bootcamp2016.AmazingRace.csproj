@@ -60,6 +60,7 @@
     <Compile Include="ViewModels\TeamViewModel.cs" />
     <Compile Include="ViewModels\DetailViewModel.cs" />
     <Compile Include="ViewModels\DummyViewModel.cs" />
+    <Compile Include="ViewModels\JoinTeamViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MapViewModel.cs" />
     <Compile Include="ViewModels\TabbedViewModel.cs" />
@@ -75,6 +76,9 @@
     </Compile>
     <Compile Include="Views\DummyView.xaml.cs">
       <DependentUpon>DummyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JoinTeamView.xaml.cs">
+      <DependentUpon>JoinTeamView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LeaderView.xaml.cs">
       <DependentUpon>LeaderView.xaml</DependentUpon>
@@ -265,6 +269,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\JoinTeamView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
