@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bootcamp2016.AmazingRace.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,16 @@ using Xamarin.Forms;
 
 namespace Bootcamp2016.AmazingRace.Views
 {
+
     public partial class TeamView : ContentPage
+
     {
-        public TeamView()
+        private IDataService dataService;
+        public TeamView(IDataService ds)
         {
+            this.dataService = ds;
             InitializeComponent();
         }
+
     }
 }

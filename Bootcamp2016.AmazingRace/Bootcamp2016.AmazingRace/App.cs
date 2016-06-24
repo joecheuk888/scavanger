@@ -49,7 +49,7 @@ namespace Bootcamp2016.AmazingRace
             container.Singleton<IAuthenticationService, AuthenticationService>();
             container.Singleton<IDataService, DataService>();
 
-            DisplayRootView<LoginView>();
+            DisplayRootView<TeamView>();
             //DisplayRootView<TabbedView>();
         }
 
