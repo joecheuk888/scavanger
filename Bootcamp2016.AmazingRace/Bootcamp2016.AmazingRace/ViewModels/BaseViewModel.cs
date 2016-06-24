@@ -1,4 +1,5 @@
-﻿using Bootcamp2016.AmazingRace.Services;
+﻿using Bootcamp2016.AmazingRace.Models;
+using Bootcamp2016.AmazingRace.Services;
 using Caliburn.Micro;
 using Caliburn.Micro.Xamarin.Forms;
 using System;
@@ -42,7 +43,7 @@ namespace Bootcamp2016.AmazingRace.ViewModels
             {
                 await _navigationService.NavigateToViewModelAsync<LoginViewModel>();
             }
-            else if ()
+            else if (await IsInTeam())
             {
                 await _navigationService.NavigateToViewModelAsync<JoinTeamViewModel>();
             }
@@ -52,9 +53,17 @@ namespace Bootcamp2016.AmazingRace.ViewModels
             }
         }
 
-        private bool IsInTeam()
+        private async Task<bool> IsInTeam()
         {
-
+            Profile pro = await _dataService.GetProfileAsync();
+            foreach (Team t in pro.teams)
+            {
+                if (t.Equals(pro.id))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

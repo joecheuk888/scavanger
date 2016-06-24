@@ -21,6 +21,11 @@
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>
+      <Button 
+            Text="Login"            
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClicked"/>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
