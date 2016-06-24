@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Bootcamp2016.AmazingRace.ViewModels
 {
-    class JoinTeamViewModel
+    public class JoinTeamViewModel : BaseScreen
     {
+
     }
 }

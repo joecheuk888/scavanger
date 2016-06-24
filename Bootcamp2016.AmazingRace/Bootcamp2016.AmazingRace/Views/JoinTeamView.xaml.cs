@@ -12,7 +12,7 @@ namespace Bootcamp2016.AmazingRace.Views
     {
         public JoinTeamView()
         {
-            InitializeComponent();
+            
         }
     }
 }
