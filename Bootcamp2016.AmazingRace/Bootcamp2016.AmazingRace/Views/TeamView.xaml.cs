@@ -15,7 +15,7 @@ namespace Bootcamp2016.AmazingRace.Views
     {
         public TeamView()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
     }

@@ -2,14 +2,24 @@
 <ContentPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+  xmlns:cal="http://www.caliburnproject.org"
 	x:Class="Bootcamp2016.AmazingRace.Views.LoginView">
   <ContentPage.Content>
     <StackLayout VerticalOptions="FillAndExpand" Padding="5,20,5,0" >
-      <Button 
-            Text="Login"            
+
+      <Button
+            Text="Login"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand"
-            />
+            Command="{Binding UpdateCommand}"
+            >
+        <i:Interaction.Triggers>
+          <i:EventTrigger EventName="Click">
+            <cal:ActionMessage MethodName="OnButtonClicked" />
+          </i:EventTrigger>
+        </i:Interaction.Triggers>
+      </Button>
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>
