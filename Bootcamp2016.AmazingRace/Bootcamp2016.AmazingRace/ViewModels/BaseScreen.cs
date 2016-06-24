@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using Caliburn.Micro.Xamarin.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,6 @@ namespace Bootcamp2016.AmazingRace.ViewModels
 {
     public class BaseScreen : Screen
     {
-
         protected bool SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
         {
             if (Object.Equals(field,value))
