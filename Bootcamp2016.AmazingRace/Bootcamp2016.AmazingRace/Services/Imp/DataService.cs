@@ -38,22 +38,26 @@ namespace Bootcamp2016.AmazingRace.Services.Imp
 
         public Task<Profile> GetProfileAsync()
         {
-            throw new NotImplementedException();
+            string url = "http://infusionamazingreace.azure-mobile.net/api/profile";
+            return client.InvokeApiAsync<Profile>(url);
         }
 
         public Task<Race> GetRaceAsync(string id)
         {
-            throw new NotImplementedException();
+            string url = "http://infusionamazingreace.azure-mobile.net/api/race/" + id;
+            return client.InvokeApiAsync<Race>(url);
         }
 
         public Task<IEnumerable<Race>> GetRacesAsync()
         {
-            throw new NotImplementedException();
+            string url = "http://infusionamazingreace.azure-mobile.net/api/race";
+            return client.InvokeApiAsync<IEnumerable<Race>>(url);
         }
 
         public Task<Team> JoinTeamAsync(string teamCode)
         {
-            throw new NotImplementedException();
+            string url = "http://infusionamazingreace.azure-mobile.net/api/profile/joinCode=" + teamCode;
+            return client.InvokeApiAsync<Team>(url);
         }
 
         public Task<bool> PostClueResponse(string clueId, double lat, double lng, byte[] dataArray)

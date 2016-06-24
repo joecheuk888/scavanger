@@ -8,6 +8,7 @@ using System.Reflection;
 using Bootcamp2016.AmazingRace.Services;
 using Bootcamp2016.AmazingRace.ViewModels;
 using Xamarin.Forms;
+using Bootcamp2016.AmazingRace.Droid.Impl;
 
 namespace Bootcamp2016.AmazingRace.Droid
 {
@@ -34,6 +35,7 @@ namespace Bootcamp2016.AmazingRace.Droid
         {
             _container = new SimpleContainer();
             _container.Instance(_container);
+            _container.Singleton<IPlatformAuthenticator, DroidAuthenticator>();
         }
 
         protected override IEnumerable<Assembly> SelectAssemblies()

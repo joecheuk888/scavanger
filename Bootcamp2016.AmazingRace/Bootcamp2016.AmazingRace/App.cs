@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Bootcamp2016.AmazingRace.Services;
 using Bootcamp2016.AmazingRace.Views;
 using Microsoft.WindowsAzure.MobileServices;
+using Bootcamp2016.AmazingRace.Services.Imp;
 
 namespace Bootcamp2016.AmazingRace
 {
@@ -30,9 +31,13 @@ namespace Bootcamp2016.AmazingRace
                 .PerRequest<DetailViewModel>()
                 ;
 
-            container.Singleton<IAuthenticationService, AuthenticationService>()
+            container.Singleton<ISettingsService, SettingsService>();
+            container.Instance<IMobileServiceClient>(client);
+            container.Singleton<IAuthenticationService, AuthenticationService>();
+            container.Singleton<IDataService, DataService>();
 
             DisplayRootView<LoginView>();
+            //DisplayRootView<TabbedView>();
         }
 
         protected override void PrepareViewFirst(NavigationPage navigationPage)
