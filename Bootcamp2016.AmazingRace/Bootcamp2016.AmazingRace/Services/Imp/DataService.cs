@@ -22,13 +22,13 @@ namespace Bootcamp2016.AmazingRace.Services.Imp
 
         public Task<Clue> GetClueAsync(string clueId)
         {
-            string url = "http://infusionamazingreace.azure-mobile.net/api/clue/" + clueId;
+            string url = "clue/" + clueId;
             return client.InvokeApiAsync<Clue>(url);
         }
 
         public Task<List<Clue>> GetCluesAsync(string raceId)
         {
-            string url = "http://infusionamazingreace.azure-mobile.net/api/" + raceId + "/clues";
+            string url = "race/" + raceId + "/clues";
             return client.InvokeApiAsync<List<Clue>>(url);
         }
 
@@ -39,25 +39,25 @@ namespace Bootcamp2016.AmazingRace.Services.Imp
 
         public Task<Profile> GetProfileAsync()
         {
-            string url = "http://infusionamazingreace.azure-mobile.net/api/profile";
+            string url = "profile";
             return client.InvokeApiAsync<Profile>(url);
         }
 
         public Task<Race> GetRaceAsync(string id)
         {
-            string url = "http://infusionamazingreace.azure-mobile.net/api/race/" + id;
+            string url = "race/" + id;
             return client.InvokeApiAsync<Race>(url);
         }
 
         public Task<IEnumerable<Race>> GetRacesAsync()
         {
-            string url = "http://infusionamazingreace.azure-mobile.net/api/race";
+            string url = "race";
             return client.InvokeApiAsync<IEnumerable<Race>>(url);
         }
 
         public Task<Team> JoinTeamAsync(string teamCode)
         {
-            string url = "http://infusionamazingreace.azure-mobile.net/api/profile/joinCode=" + teamCode;
+            string url = "profile/joinCode=" + teamCode;
             return client.InvokeApiAsync<Team>(url, HttpMethod.Post, null);
         }
 
