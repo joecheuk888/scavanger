@@ -1,4 +1,6 @@
 ﻿
+using Bootcamp2016.AmazingRace.Services;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace Bootcamp2016.AmazingRace.ViewModels
 {
@@ -7,6 +9,18 @@ namespace Bootcamp2016.AmazingRace.ViewModels
     /// </summary>
     public class TeamViewModel : BaseScreen
     {
+        IMobileServiceClient client;
+        IDataService dataService;
 
+        public TeamViewModel(IMobileServiceClient client, IDataService ds) {
+            this.client = client;
+            this.dataService = ds;
+
+        }
+
+
+        public string Name { get {
+                return client.CurrentUser.UserId;
+            }}
     }
 }

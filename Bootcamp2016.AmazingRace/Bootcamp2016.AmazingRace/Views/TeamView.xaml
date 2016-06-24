@@ -1,8 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:cal="http://www.caliburnproject.org"
              x:Class="Bootcamp2016.AmazingRace.Views.TeamView">
-  <Label Text="Welcome {Binding UserName}" VerticalOptions="Top" HorizontalOptions="Center" />
+  <StackLayout>
+    <Label x:Name="Name" Text="Welcome !" VerticalOptions="Top" HorizontalOptions="Center" />
+
+    <Lablel Text="Complete your registration by providing your team code"/>
+
+    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox"/>
+
+    <Button Content="Join">
+      <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Click">
+          <cal:ActionMessage MethodName="SayHello" />
+        </i:EventTrigger>
+      </i:Interaction.Triggers>
+    </Button>
+  </StackLayout>
   
   
   
