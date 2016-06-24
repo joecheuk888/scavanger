@@ -5,6 +5,7 @@ using Caliburn.Micro.Xamarin.Forms;
 using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
+using System.Windows.Input;
 
 namespace Bootcamp2016.AmazingRace.ViewModels
 {
@@ -23,24 +24,14 @@ namespace Bootcamp2016.AmazingRace.ViewModels
             this._navigationService = navService;
             this._mobileServiceClient = client;
         }
-
-        protected override void OnInitialize()
-        {
-
-        }
-
-        protected override void OnActivate()
-        {
-            
-        }
-
-        protected async void OnButtonClicked(object sender, EventArgs args)
+        protected async void OnButtonClicked()
         {
             bool result = await _authService.LoginAsync();
             if (result)
             {
                 await _navigationService.GoBackAsync();
-            } else
+            }
+            else
             {
 
             }
