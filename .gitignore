@@ -10,3 +10,8 @@ Bootcamp2016.AmazingRace/Bootcamp2016.AmazingRace.Windows/obj/
 Bootcamp2016.AmazingRace/Bootcamp2016.AmazingRace.WinPhone/obj/
 .vs/
 Bootcamp2016.AmazingRace/Bootcamp2016.AmazingRace/Bootcamp2016.AmazingRace.csproj
+<<<<<<< HEAD
+=======
+*.csproj
+Bootcamp2016.AmazingRace/Bootcamp2016.AmazingRace/Bootcamp2016.AmazingRace.csproj
+>>>>>>> 1b01b82... test1

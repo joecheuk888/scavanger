@@ -17,12 +17,14 @@ namespace Bootcamp2016.AmazingRace.ViewModels
         private readonly IAuthenticationService _authService;
         private readonly INavigationService _navigationService;
         private readonly IMobileServiceClient _mobileServiceClient;
+        public ICommand UpdateCommand;
 
         public LoginViewModel(IMobileServiceClient client, IAuthenticationService authService, INavigationService navService)
         {
             this._authService = authService;
             this._navigationService = navService;
             this._mobileServiceClient = client;
+            //UpdateCommand = new (() =>  {     });
         }
         protected async void OnButtonClicked()
         {

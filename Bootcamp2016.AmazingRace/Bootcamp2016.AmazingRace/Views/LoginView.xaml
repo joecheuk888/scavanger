@@ -14,11 +14,6 @@
             VerticalOptions="CenterAndExpand"
             Command="{Binding UpdateCommand}"
             >
-        <i:Interaction.Triggers>
-          <i:EventTrigger EventName="Click">
-            <cal:ActionMessage MethodName="OnButtonClicked" />
-          </i:EventTrigger>
-        </i:Interaction.Triggers>
       </Button>
     </StackLayout>
   </ContentPage.Content>
