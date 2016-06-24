@@ -6,6 +6,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Bootcamp2016.AmazingRace.ViewModels
 {
@@ -17,16 +18,16 @@ namespace Bootcamp2016.AmazingRace.ViewModels
         private readonly IAuthenticationService _authService;
         private readonly INavigationService _navigationService;
         private readonly IMobileServiceClient _mobileServiceClient;
-        public ICommand UpdateCommand;
+        public Command UpdateCommand { get; set; }
 
         public LoginViewModel(IMobileServiceClient client, IAuthenticationService authService, INavigationService navService)
         {
             this._authService = authService;
             this._navigationService = navService;
             this._mobileServiceClient = client;
-            //UpdateCommand = new (() =>  {     });
+            UpdateCommand = new Command(Update);
         }
-        protected async void OnButtonClicked()
+        private async void Update()
         {
             bool result = await _authService.LoginAsync();
             if (result)

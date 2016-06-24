@@ -14,6 +14,7 @@ namespace Bootcamp2016.AmazingRace.ViewModels
         IMobileServiceClient client;
         IDataService dataService;
         string teamCode;
+
         public TeamViewModel(IMobileServiceClient client, IDataService ds) {
             this.client = client;
             this.dataService = ds;

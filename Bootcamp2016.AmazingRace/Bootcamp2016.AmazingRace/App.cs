@@ -41,7 +41,11 @@ namespace Bootcamp2016.AmazingRace
 >>>>>>> 95551d7... j3
 =======
                 .PerRequest<LoginViewModel>()
+<<<<<<< HEAD
 >>>>>>> 3476c60... Login view shows
+=======
+                .PerRequest<BaseViewModel>()
+>>>>>>> 0938cc6... Login functionality
                 ;
 
             container.Singleton<ISettingsService, SettingsService>();
@@ -49,7 +53,7 @@ namespace Bootcamp2016.AmazingRace
             container.Singleton<IAuthenticationService, AuthenticationService>();
             container.Singleton<IDataService, DataService>();
 
-            DisplayRootView<TeamView>();
+            DisplayRootView<LoginView>();
             //DisplayRootView<TabbedView>();
         }
 

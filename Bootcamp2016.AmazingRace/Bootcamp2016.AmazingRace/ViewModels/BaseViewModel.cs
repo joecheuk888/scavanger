@@ -36,7 +36,7 @@ namespace Bootcamp2016.AmazingRace.ViewModels
             return false;
         }
 
-        protected async override void OnInitialize()
+        protected async override void OnActivate()
         {
             bool result = await _authService.IsLoggedInAsync();
             if (result)
