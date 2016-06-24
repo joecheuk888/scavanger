@@ -15,8 +15,6 @@ namespace Bootcamp2016.AmazingRace.Views
             InitializeComponent();
         }
 
-        protected void OnButtonClickedJoinTeam(object sender, EventArgs args) {
 
-        }
     }
 }

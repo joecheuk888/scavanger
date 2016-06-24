@@ -45,7 +45,7 @@ namespace Bootcamp2016.AmazingRace.ViewModels
             }
             else if (await IsInTeam())
             {
-                await _navigationService.NavigateToViewModelAsync<JoinTeamViewModel>();
+                await _navigationService.NavigateToViewModelAsync<TeamViewModel>();
             }
             else
             {

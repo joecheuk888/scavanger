@@ -29,6 +29,15 @@ namespace Bootcamp2016.AmazingRace
 
         container
                 .PerRequest<DetailViewModel>()
+<<<<<<< HEAD
+=======
+                .PerRequest<TabbedView>()
+                .PerRequest<LeaderViewModel>()
+                .PerRequest<CluesViewModel>()
+                .PerRequest<DetailViewModel>()
+                .PerRequest<MapViewModel>()
+                .PerRequest<TeamViewModel>()
+>>>>>>> 95551d7... j3
                 ;
 
             container.Singleton<ISettingsService, SettingsService>();

@@ -11,7 +11,7 @@ namespace Bootcamp2016.AmazingRace.ViewModels
     {
         IMobileServiceClient client;
         IDataService dataService;
-
+        string inputboxValue;
         public TeamViewModel(IMobileServiceClient client, IDataService ds) {
             this.client = client;
             this.dataService = ds;
@@ -22,5 +22,15 @@ namespace Bootcamp2016.AmazingRace.ViewModels
         public string Name { get {
                 return client.CurrentUser.UserId;
             }}
+
+        public void JoinTeam() {
+            dataService.JoinTeamAsync(this.inputboxValue);
+        }
+
+        public string InputTextBox {
+        set {
+                this.inputboxValue = value;
+            }
+        }
     }
 }

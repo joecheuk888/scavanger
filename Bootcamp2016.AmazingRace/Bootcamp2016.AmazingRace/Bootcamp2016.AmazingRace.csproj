@@ -57,6 +57,7 @@
     <Compile Include="ViewModels\BaseScreen.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\CluesViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel.cs" />
     <Compile Include="ViewModels\DetailViewModel.cs" />
     <Compile Include="ViewModels\DummyViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
@@ -86,6 +87,9 @@
     </Compile>
     <Compile Include="Views\TabbedView.xaml.cs">
       <DependentUpon>TabbedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamView.xaml.cs">
+      <DependentUpon>TeamView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -255,6 +259,12 @@
       <SubType>Designer</SubType>
     </Page>
 >>>>>>> 509659c... Started handling initial screen navigation in BaseViewModel
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TeamView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

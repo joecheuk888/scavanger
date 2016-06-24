@@ -8,13 +8,12 @@
     <Label x:Name="Name" Text="Welcome !" VerticalOptions="Top" HorizontalOptions="Center" />
 
     <Lablel Text="Complete your registration by providing your team code"/>
-
-    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox"/>
+    <Entry x:Name="InputTextBox" Placeholder="Enter Team Code" />
 
     <Button Content="Join">
       <i:Interaction.Triggers>
         <i:EventTrigger EventName="Click">
-          <cal:ActionMessage MethodName="SayHello" />
+          <cal:ActionMessage MethodName="JoinTeam" />
         </i:EventTrigger>
       </i:Interaction.Triggers>
     </Button>
