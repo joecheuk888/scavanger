@@ -8,6 +8,7 @@ using System.Json;
 using System.Net;
 using System.IO;
 using Microsoft.WindowsAzure.MobileServices;
+using System.Net.Http;
 
 namespace Bootcamp2016.AmazingRace.Services.Imp
 {
@@ -57,7 +58,7 @@ namespace Bootcamp2016.AmazingRace.Services.Imp
         public Task<Team> JoinTeamAsync(string teamCode)
         {
             string url = "http://infusionamazingreace.azure-mobile.net/api/profile/joinCode=" + teamCode;
-            return client.InvokeApiAsync<Team>(url);
+            return client.InvokeApiAsync<Team>(url, HttpMethod.Post, null);
         }
 
         public Task<bool> PostClueResponse(string clueId, double lat, double lng, byte[] dataArray)

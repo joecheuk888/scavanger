@@ -13,10 +13,8 @@ namespace Bootcamp2016.AmazingRace.Views
     public partial class TeamView : ContentPage
 
     {
-        private IDataService dataService;
-        public TeamView(IDataService ds)
+        public TeamView()
         {
-            this.dataService = ds;
             InitializeComponent();
         }
 
