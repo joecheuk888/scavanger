@@ -1,6 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Bootcamp2016.AmazingRace.Views.LoginView">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Bootcamp2016.AmazingRace.Views.LoginView">
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand" Padding="5,20,5,0" >
+      <Label
+				Text="Login"
+				VerticalOptions="Center"
+				Font="40"
+				HorizontalOptions="Center" />
+      <ListView x:Name="list" ItemsSource="{Binding logins}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ImageCell
+							Text="{Binding Name}"
+							Detail="{Binding Position, StringFormat='{0}'}"
+							ImageSource="{Binding Image}">
+            </ImageCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

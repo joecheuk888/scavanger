@@ -10,9 +10,6 @@ namespace Bootcamp2016.AmazingRace.Views
 {
     public partial class LoginView : ContentPage
     {
-        public LoginView()
-        {
-            InitializeComponent();
-        }
+        
     }
 }

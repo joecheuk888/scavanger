@@ -1,5 +1,8 @@
 ﻿
 
+using Microsoft.WindowsAzure.MobileServices;
+using System.Collections.Generic;
+
 namespace Bootcamp2016.AmazingRace.ViewModels
 {
     /// <summary>
@@ -7,6 +10,9 @@ namespace Bootcamp2016.AmazingRace.ViewModels
     /// </summary>
     public class LoginViewModel : BaseScreen
     {
-        
+        public LoginViewModel(IMobileServiceClient client)
+        {
+            
+        }
     }
 }
